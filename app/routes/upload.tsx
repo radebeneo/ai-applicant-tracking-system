@@ -75,6 +75,7 @@ const Upload = () => {
             await kv.set(`resume:${uuid}`, JSON.stringify(data));
             setStatusText('Analysis complete, redirecting...');
             console.log(data);
+            navigate(`/resume/${uuid}`)
 
         } catch (error) {
             console.error('Error during analysis:', error);
