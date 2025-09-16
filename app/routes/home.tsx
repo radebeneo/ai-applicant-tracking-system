@@ -4,7 +4,6 @@ import ResumeCard from "~/components/ResumeCard";
 import {usePuterStore} from "~/lib/puter";
 import {Link, useNavigate} from "react-router";
 import {useEffect, useState} from "react";
-import resume from "~/routes/resume";
 
 
 export function meta({}: Route.MetaArgs) {
@@ -40,7 +39,7 @@ export default function Home() {
              setLoadingResumes(false);
          }
 
-
+        loadResumes();
      }, []);
 
     return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -72,7 +71,7 @@ export default function Home() {
           )}
 
           {!loadingResumes && resumes.length === 0 && (
-              <div className="flex flex-col gap-4 mt-10 items-center justify-center">
+              <div className="flex flex-col gap-4 mt-10  items-center justify-center">
                   <Link to="/upload" className="primary-button w-fit text-xl font-semi-bold">
                       Upload Resume
                   </Link>
