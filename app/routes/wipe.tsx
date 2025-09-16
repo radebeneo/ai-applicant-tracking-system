@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import {Link, useNavigate} from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
 const WipeApp = () => {
@@ -56,6 +56,12 @@ const WipeApp = () => {
                 >
                     Wipe App Data
                 </button>
+
+                <div className="flex flex-row gap-3 mt-4">
+                    <Link to="/auth" className="back-button">`Sign Out`</Link>
+                    <Link to="/" className="back-button">Go to Home</Link>
+                </div>
+
             </div>
         </div>
     );

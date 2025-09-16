@@ -40,6 +40,7 @@ export default function Home() {
          }
 
         loadResumes();
+
      }, []);
 
     return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -54,6 +55,11 @@ export default function Home() {
               ):(
               <h2>Review your submissions and check AI-powered feedback.</h2>
               )}
+
+              <div className="flex flex-row gap-3 mt-4">
+                  <Link to="/auth" className="back-button">Sign Out</Link>
+                  <Link to="/wipe" className="back-button">Wipe Data</Link>
+              </div>
 
           </div>
           {loadingResumes && (

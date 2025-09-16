@@ -1,5 +1,5 @@
 import {usePuterStore} from "~/lib/puter";
-import {useLocation, useNavigate} from "react-router";
+import {Link, useLocation, useNavigate} from "react-router";
 import {useEffect} from "react";
 
 export const meta =() =>([
@@ -26,6 +26,11 @@ const   Auth= () => {
                         <h1>Welcome</h1>
                         <h2>Sign In to Continue Your Job Search Journey</h2>
                     </div>
+
+                    <div className="flex flex-row gap-3 mt-4 items-center justify-center" >
+                        <Link to="/" className="back-button">Go to Home</Link>
+                    </div>
+
                     <div>
                         {isLoading ? (
                             <button className="auth-button animate-pulse">
@@ -42,12 +47,21 @@ const   Auth= () => {
                                     <p>Sign In</p>
                                 </button>}
                             </>
+
+
                         )}
+
                     </div>
+
+
+
                 </section>
+
+
             </div>
 
         </main>
+
     );
 };
 
