@@ -3,7 +3,7 @@ import {Link, useLocation, useNavigate} from "react-router";
 import {useEffect} from "react";
 
 export const meta =() =>([
-    {title: "Resumind | Auth"},
+    {title: "Analyze | Auth"},
     {name: "description", content: "Log into your account"},
 ])
 

@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Resumind" },
+    { title: "Analyze" },
     { name: "description", content: "Smark feedback for your dream job !" },
   ];
 }
